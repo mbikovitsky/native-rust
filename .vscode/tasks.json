@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cargo",
+			"command": "rustc",
+			"args": [
+				"--",
+				"-C", "link-args=/ENTRY:_start /SUBSYSTEM:native",
+			],
+			"problemMatcher": [
+				"$rustc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"label": "rust: cargo rustc"
+		}
+	]
+}
